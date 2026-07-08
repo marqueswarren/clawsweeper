@@ -2,6 +2,42 @@
   "schema_version": 2,
   "repositories": [
     {
+      "target_repo": "marqueswarren/sterling-intelligence-platform",
+      "display_name": "Sterling Intelligence Platform (Portal)",
+      "checkout_dir": "sterling-intelligence-platform",
+      "prompt_note": "Warren Group internal portal. Review Portal Next.js/TypeScript PRs. Auto-merge PRs that cite a BRIEF-... reference in the body, have all checks green, and are purely additive (new pages, new API routes, bug fixes). Never auto-close open feature requests.",
+      "apply_close_rules": {
+        "pull_request": ["implemented_on_main"]
+      },
+      "package_manager": "pnpm",
+      "validation_commands": ["pnpm --filter @sterling/portal typecheck"],
+      "changed_gate": null
+    },
+    {
+      "target_repo": "marqueswarren/warren-group-website",
+      "display_name": "Warren Group Website",
+      "checkout_dir": "warren-group-website",
+      "prompt_note": "Warren Group public websites (static HTML/Next.js). Auto-merge PRs citing a BRIEF-... reference with all checks green.",
+      "apply_close_rules": {
+        "pull_request": ["implemented_on_main"]
+      },
+      "package_manager": "npm",
+      "validation_commands": [],
+      "changed_gate": null
+    },
+    {
+      "target_repo": "marqueswarren/madwine-com",
+      "display_name": "MadWine.com",
+      "checkout_dir": "madwine-com",
+      "prompt_note": "MadWine public site (Next.js). Auto-merge PRs citing a BRIEF-... reference with all checks green.",
+      "apply_close_rules": {
+        "pull_request": ["implemented_on_main"]
+      },
+      "package_manager": "npm",
+      "validation_commands": [],
+      "changed_gate": null
+    },
+    {
       "target_repo": "openclaw/clawhub",
       "display_name": "ClawHub",
       "checkout_dir": "clawhub",
